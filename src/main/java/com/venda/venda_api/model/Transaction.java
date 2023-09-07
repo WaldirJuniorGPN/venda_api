@@ -22,7 +22,7 @@ public class Transaction {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private UUID id;
-    @ManyToMany
+    @ManyToOne
     private Client client;
     private BigDecimal totalToPay;
     @ManyToOne
